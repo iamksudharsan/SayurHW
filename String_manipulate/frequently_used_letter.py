@@ -4,30 +4,14 @@ Eg - "We Attack at Dawn" is input. Output should be 'atwcdekn'
 Do not use dictionaries. Try to use string built in functions.
 '''
 
-def mostFrequentLetters(s):
-    # Convert the string to lowercase
-    s = s.lower()
+input=input("Enter the string:")
+a=input.lower()
+a=a.replace(" ", "")
+res=''.join(sorted(a))
+print(res)
 
-    # Remove non-alphabetic characters
-    s = ''.join(filter(str.isalpha, s))
+sorted_word = ''.join(sorted(set(res)))
+print(sorted_word)
+#print(a)
 
-    # Count the occurrences of each letter
-    letter_counts = {}
-    for char in s:
-        if char in letter_counts:
-            letter_counts[char] += 1
-        else:
-            letter_counts[char] = 1
-
-    # Sort the letters first by frequency (in descending order) and then alphabetically
-    sorted_letters = sorted(letter_counts.keys(), key=lambda x: (-letter_counts[x], x))
-
-    # Convert the sorted letters to a lowercase string
-    result = ''.join(sorted_letters)
-
-    return result
-
-# Example usage:
-input_str = "We Attack at Dawn"
-s = mostFrequentLetters(input_str)
-print(s)  # Output: 'atwcdekn'
+#atwcedkn
