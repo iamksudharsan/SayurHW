@@ -40,3 +40,11 @@ while True:
 
 # End of the program
 print("Thank you for shopping with us!")
+
+'''
+Output:
+What do you want to buy? i need apple
+You want 1 apple
+What do you want to buy? i need 5 orange
+You want 5 orange.
+'''
